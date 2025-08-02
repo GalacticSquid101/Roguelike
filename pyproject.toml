@@ -1,0 +1,24 @@
+[project]
+name = "roguelike"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "GalacticSquid101",email = "grant101.ogden@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "tcod (>=19.3.0,<20.0.0)",
+    "auto-all (>=1.4.1,<2.0.0)"
+]
+
+[tool.poetry]
+packages = [{include = "roguelike", from = "src"}]
+
+[tool.poetry.scripts]
+roguelike = "roguelike.main:main"
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
